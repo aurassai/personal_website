@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body id="index">
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div id="logo" class="hidden">
+                <!-- <img src="img/logo.png" alt=""> -->
+            </div>
+            <ul class="hide-on-small">
+                <li id="contact-li">
+                    <a href="#contact">Contact</a>
+                </li>
+                <li id="portfolio-li">
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li id="about-li">
+                    <a href="#about">About Me</a>
+                </li>
+                <li id="welcome-li" class="active">
+                    <a href="#welcome">Home</a>
+                </li>
+            </ul>
+            <a><i id="menu-icon" class="fas fa-bars hide-on-medium hide-on-large hide-on-very-large"></i></a>
+            <ul id="mobile-nav" class="hidden hide-on-medium hide-on-large hide-on-very-large">
+                <li id="welcome-mobile-li">
+                    <a href="#welcome" class="lead">Home</a>
+                </li>
+                <li id="about-mobile-li">
+                    <a href="#about" class="lead">About Me</a>
+                </li>
+                <li id="portfolio-mobile-li">
+                    <a href="#portfolio" class="lead">Portfolio</a>
+                </li>
+                <li id="contact-mobile-li">
+                    <a href="#contact" class="lead">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="parallax section">
+        <h1 id="title" class="lg-heading">Borislav Raychev</h1>
+        <h1 class="sm-heading">Web Developper, System Administrator and Engineer</h1>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section container">
+        <h1 class="md-heading secondary-text">A Bit About Me...</h1>
+        <div class="container">
+            <img src="img/photo2.jpg" alt="" id="photo">
+            <div>
+                <!-- <h2 class="primary-text">A Bit About Me...</h2> -->
+                <div class="about-icon"><i class="fas fa-question"></i></div>
+                <p class="lead">
+                    Hello, my name is Borislav. Presently I work as a system administrator and a freelance web
+                    developper.
+                </p>
+                <p class="lead">
+                    Due to my passion for computer technology, I found out I really enjoy coding. This website is to
+                    showcase some of my projects
+                    and to help me pick up some side work.
+                </p>
+                <hr class="primary">
+                <p class="lead">
+                    Here are some of the technologies I use:
+                </p>
+                <ul class="lead">
+                    <li>HTML5, CSS, JavaScript ES6</li>
+                    <li>SASS, JSX, jQuery, React</li>
+                    <li>Bootstrap, MaterializeCSS</li>
+                    <li>NodeJS, Express</li>
+                    <li>SQL, MongoDB</li>
+                </ul>
+            </div>
+            <div>
+                <div class="about-icon"><i class="fas fa-book-reader"></i></div>
+                <p class="lead">
+                    I graduated the Technical University of Plovdiv, as an engineer in Computer Systems and Technology.
+                </p>
+                <p class="lead">
+                    After which I started working as an RTL Verification specialist with SystemVerilog and UVM.
+                    That position helped me further my knowledge in object oriented programming, use of standardized methodologies, 
+                    version control solutions and automated bugtesting.
+                </p>
+                <p class="lead">
+                    Eventually I moved to system administration, which helped me improve my knowledge in virtualization, networking, 
+                    computer automation and working with databases.
+                    Now, I seek to expand my knowledge into the vast realm of full stack web development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <h1 class="md-heading">Some of my work:</h1>
+        <div id="portfolio-wrap">
+            <div id="proj1" class="project">
+                <p class="projTitle">Simon Says</p>
+                <div class="projDescription">
+                    <a href="https://codepen.io/aurassai/full/JZPRoa/" target="_blank">
+                        <h1 class="sm-heading tertiary-text">Simon Says</h1>
+                    </a>
+                    <div class="description">
+                        <p class="lead">A memory game made for FreeCodeCamp. Users are required to remember a sequence
+                            of steps, up to 20 levels. Game features a strict mode that resets the progress whenever a
+                            mistake is made.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="proj2" class="project">
+                <p class="projTitle">Calculator</p>
+                <div class="projDescription">
+                    <a href="https://codepen.io/aurassai/full/NYZJjE/" target="_blank">
+                        <h1 class="sm-heading tertiary-text">Javascript Calculator</h1>
+                    </a>
+                    <div class="description">
+                        <p class="lead">Calculator written for FreeCodeCamp. With this project I did not only want to
+                            emulate a physical calculator, but make it so the user is able to do fast, seamless
+                            calculations with keyboard inputs.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="proj3" class="project">
+                <p class="projTitle">Pomodoro Clock</p>
+                <div class="projDescription">
+                    <a href="https://codepen.io/aurassai/full/RJWrqe/" target="_blank">
+                        <h1 class="sm-heading tertiary-text">Pomodoro Clock</h1>
+                    </a>
+                    <div class="description">
+                        <p class="lead">A productivity timer app made for FCC. The idea is for the user to have a
+                            working session followed by a break session. The user can change the length of the sessions
+                            or pause. The sessions duration are remembered in the browser's local storage.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="proj4" class="project">
+                <p class="projTitle">Tic Tac Toe</p>
+                <div class="projDescription">
+                    <a href="https://codepen.io/aurassai/full/oyvzvQ/" target="_blank">
+                        <h1 class="sm-heading tertiary-text">Tic Tac Toe</h1>
+                    </a>
+                    <div class="description">
+                        <p class="lead">A Tic Tac Toe game made for FFC. The user can select to play as either X and
+                            start first, or O to start second.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="proj5" class="project">
+                <p class="projTitle">Twitch Watcher</p>
+                <div class="projDescription">
+                    <a href="https://codepen.io/aurassai/full/jzrwje/" target="_blank">
+                        <h1 class="sm-heading tertiary-text">Twitch JSON API App</h1>
+                    </a>
+                    <div class="description">
+                        <p class="lead">Another app made for FCC, where the user can check if their favorite streamers
+                            are currently streaming on twitch. It uses the twitch API. While the app offers a pre-made
+                            list of streamers, the user is able to customize their own, stored in the browser's local
+                            storage.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="proj6" class="project">
+                <p class="projTitle">Weather App</p>
+                <div class="projDescription">
+                    <a href="https://codepen.io/aurassai/full/paxZVw/" target="_blank">
+                        <h1 class="sm-heading tertiary-text">Weather App</h1>
+                    </a>
+                    <div class="description">
+                        <p class="lead">My first project using an external API. It is a weather app made for FCC. After
+                            being granted access to the user's location, it gives a weather forecast at the given
+                            location.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="proj7" class="project">
+                <p class="projTitle">Random Quote Generator</p>
+                <div class="projDescription">
+                    <a href="https://codepen.io/aurassai/full/XZqGWO/" target="_blank">
+                        <h1 class="sm-heading tertiary-text">Random Quote Generator</h1>
+                    </a>
+                    <div class="description">
+                        <p class="lead">A quote generator app for FCC. The user can generate random quotes and post
+                            them on twitter.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="proj8" class="project">
+                <p class="projTitle">Wikipedia Finder</p>
+                <div class="projDescription">
+                    <a href="https://codepen.io/aurassai/full/XEVGYx/" target="_blank">
+                        <h1 class="sm-heading tertiary-text">Wikipedia Finder</h1>
+                    </a>
+                    <div class="description">
+                        <p class="lead">A Wikipedia search app using the Wikipedia API to display a list of results
+                            with links to the pages. There is also a button that opens up a random article. Made as
+                            part of the FCC certification process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h1 class="md-heading">This is how you can reach me...</h1>
+        <div class="boxes container">
+            <div class="tertiary">
+                <span class="secondary-text">Email:</span> b-raychev@yandex.com
+            </div>
+            <div class="tertiary">
+                <span class="secondary-text">Phone:</span> +359 895 335 765
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="hidden">
+        <div class="container">
+            <ul id="footer-icons">
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://codepen.io/aurassai" target="_blank"><i class="fab fa-free-code-camp"></i></a></li>
+                <li><a href="https://github.com/aurassai" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+            <p class="lead">
+                &copy; 2018 Borislav Raychev
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
