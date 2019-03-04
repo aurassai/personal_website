@@ -1,0 +1,654 @@
+@import "config";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba($primary-color, $background-opacity),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+//Headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.md-heading {
+        font-size: 4rem;
+    }
+
+    &.sm-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+    }
+}
+
+// Utility Classes
+.hidden {
+    // visibility: hidden;
+    // height: 0;
+    // width: 0;
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.container {
+    max-width: 1180px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.lead {
+    font-size: 1.3rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.primary {
+    background: $primary-color;
+    color: set-text-color($secondary-color);
+}
+
+.secondary {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+}
+
+.tertiary {
+    background: $tertiary-color;
+    color: set-text-color($secondary-color);
+}
+
+.primary-text {
+    color: $primary-color;
+}
+
+.secondary-text {
+    color: $secondary-color;
+}
+
+.tertiary-text {
+    color: $tertiary-color;
+}
+
+//shadows
+.b-shadow {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.br-shadow {
+    -webkit-box-shadow: 8px 8px 6px -6px black;
+    -moz-box-shadow: 8px 8px 6px -6px black;
+    box-shadow: 8px 8px 6px -6px black;
+}
+
+// Navigation
+nav {
+    background-color: $secondary-color;
+    position: fixed;
+    width: 100%;
+    z-index: 8;
+
+    #logo {
+        // @include fadeIn;
+        @include fadeInOut;
+        //display: block; // display again if I add a logo
+        display: hidden;
+        width: 45px;
+        height: 45px;
+        float: left;
+        margin-left: 10px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            float: right;
+
+            a {
+                @include easeOut;
+                display: block;
+                color: set-text-color($secondary-color);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+
+                &:hover {
+                    @include easeOut;
+                    background-color: $tertiary-color;
+                    color: set-text-color($tertiary-color);
+                }
+            }
+        }
+
+        .active {
+            a {
+                @include easeOut;
+                background-color: $primary-color !important;
+                color: set-text-color($primary-color);
+            }
+        }
+    }
+
+    #menu-icon {
+        color: set-text-color($secondary-color);
+        padding: 14px 16px;
+        float: right;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .fa-times,
+    .fa-bars {
+        @include fadeIn;
+        @include fadeInOut;
+    }
+
+    #mobile-nav {
+        @include fadeInOut;
+        text-align: center;
+        width: 100%;
+
+        li {
+            float: left;
+            clear: left;
+            width: 100%;
+            z-index: 15;
+        }
+    }
+}
+
+section {
+    padding: 5rem 0;
+}
+
+#index {
+    section {
+        min-height: 100vh;
+        font-family: "Lato", sans-serif;
+    }
+
+    #welcome {
+        @include background;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        font-family: "Lato", "Segoe UI", "Tahoma", "Segoe UI", Tahoma, Geneva,
+            Verdana, sans-serif;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        * {
+            z-index: 1;
+        }
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        min-height: 100vh;
+
+        .container {
+            padding: 20px;
+            display: grid;
+            grid-gap: 35px;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: left;
+            align-content: center;
+            align-items: center;
+
+            .about-icon {
+                font-size: 2.5rem;
+                margin-bottom: 25px;
+                text-align: center;
+                color: $primary-color;
+                opacity: 0.8;
+            }
+
+            div {
+                align-self: flex-start;
+            }
+
+            #photo {
+                width: 250px;
+                height: 250px;
+                border: 3px solid $primary-color;
+                border-radius: 50%;
+                justify-self: center;
+                opacity: 0.8;
+            }
+
+            #photo:hover {
+                @include easeOut;
+                opacity: 1;
+            }
+
+            p {
+                margin: 10px 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 10px 4px;
+            }
+        }
+    }
+
+    #portfolio {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        #portfolio-wrap {
+            margin: auto;
+            padding: 35px;
+            display: grid;
+            grid-gap: 30px;
+            grid-auto-flow: row dense;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .project {
+            @include easeOut;
+            position: relative;
+            border: 3px solid $tertiary-color;
+            width: $projectWidth;
+            height: $projectHeight;
+            opacity: $projectOpacity;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+
+            .tag {
+                @include easeOut;
+                position: absolute;
+                color: set-text-color($tertiary-color);
+                background: $tertiary-color;
+                width: 22%;
+                border-radius: 25px;
+                top: 10px;
+                right: 25px;
+                font-size: 0.75rem;
+            }
+        }
+
+        .project:hover {
+            @include easeOut;
+            opacity: $projectOpacityHover;
+            border: 3px solid $primary-color;
+
+            .projTitle {
+                color: set-text-color($primary-color);
+                background: $primary-color;
+            }
+
+            .tag {
+                color: set-text-color($primary-color);
+                background: $primary-color;
+            }
+        }
+
+        .projTitle {
+            @include easeOut;
+            position: absolute;
+            margin: auto;
+            padding: 5px;
+            bottom: 10%;
+            left: 50% - 35%;
+            width: 70%;
+            color: set-text-color($tertiary-color);
+            border-radius: 25px;
+            font-size: 1.25rem;
+            background: $tertiary-color;
+            z-index: 1;
+        }
+    }
+
+    .modal {
+        @include fadeInShort;
+        z-index: 10;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: $modalWidth;
+        max-width: 90%;
+        height: $modalHeight;
+        max-height: 80%;
+        border: 3px solid lighten($primary-color, 5);
+        background: lighten($secondary-color, 5);
+        color: set-text-color(lighten($secondary-color, 5));
+        font-family: "Lato", sans-serif;
+        opacity: $modalOpacity;
+
+        a {
+            @include easeOut;
+            color: lighten($tertiary-color, 5);
+        }
+
+        a:hover {
+            color: $primary-color;
+        }
+
+        .modal-close {
+            @include easeOut;
+            z-index: 15;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 1.5rem;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        .modal-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 35px;
+            overflow-y: auto;
+
+            .zoom {
+                @include easeOut;
+                z-index: 15;
+                position: absolute;
+                color: set-text-color($tertiary-color);
+                background: $tertiary-color;
+                text-align: center;
+                border-radius: 50%;
+                padding: 5px 9px;
+                bottom: 25px;
+                right: 25px;
+                font-size: 1.2rem;
+            }
+
+            .zoom:hover {
+                color: set-text-color($primary-color);
+                background: $primary-color;
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin-left: 15px;
+                }
+            }
+            .modal-grid-row {
+                margin: auto;
+                padding: 35px;
+                display: grid;
+                grid-gap: 30px;
+                grid-auto-flow: row dense;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                justify-items: center;
+                justify-content: center;
+            }
+
+            .modal-grid-cell {
+                @include easeOut;
+                position: relative;
+                border: 3px solid $tertiary-color;
+                width: $modalCellWidth;
+                height: $modalCellHeight;
+                opacity: $projectOpacity;
+                text-align: center;
+                background-size: cover;
+                background-position: center;
+
+                &:hover {
+                    border: 3px solid $primary-color;
+                    opacity: $projectOpacityHover;
+
+                    .tag {
+                        color: set-text-color($primary-color);
+                        background: $primary-color;
+                    }
+
+                    .projTitle {
+                        color: set-text-color($primary-color);
+                        background: $primary-color;
+                    }
+                }
+
+                .projTitle {
+                    @include easeOut;
+                    position: absolute;
+                    margin: auto;
+                    padding: 5px;
+                    bottom: 10%;
+                    left: 50% - 35%;
+                    width: 70%;
+                    color: set-text-color($tertiary-color);
+                    border-radius: 25px;
+                    font-size: 1rem;
+                    background: $tertiary-color;
+                    z-index: 1;
+                }
+            }
+
+            .modal-grid-text-cell {
+                @include easeOut;
+                position: relative;
+                width: $modalCellWidth;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .wip {
+                margin: auto;
+                width: $modalCellWidth;
+                height: $modalCellHeight;
+                background: url("../img/WIP.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .tag {
+                @include easeOut;
+                position: absolute;
+                color: set-text-color($tertiary-color);
+                background: $tertiary-color;
+                text-align: center;
+                width: 33%;
+                border-radius: 25px;
+                top: 10px;
+                right: 25px;
+                font-size: 0.75rem;
+            }
+
+            .github-link {
+                margin-top: 20px;
+
+                i {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .modal-overlay {
+        @include easeOut;
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: lighten($secondary-color, 5);
+        opacity: $modalOverlayOpacity;
+    }
+
+    #contact {
+        text-align: center;
+
+        .md-heading {
+            display: inline-block;
+            color: $secondary-color;
+        }
+
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1rem;
+
+            div {
+                font-size: 2rem;
+                border: 3px $secondary-color solid;
+                padding: 1.5rem 2.5rem;
+                margin-bottom: 3rem;
+                @include easeOut;
+
+                &:hover {
+                    padding: 0.5rem 1.5rem;
+                    background: $primary-color;
+                    color: set-text-color($primary-color);
+
+                    span {
+                        color: set-text-color($primary-color);
+                    }
+                }
+            }
+        }
+
+        a {
+            color: $secondary-color;
+        }
+
+        a:hover {
+            color: set-text-color($primary-color);
+        }
+
+        .container {
+            padding: 2rem !important;
+        }
+    }
+
+    #footer {
+        @include fadeInOut;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 5%;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        z-index: 8;
+
+        .container {
+            @include easeOut;
+        }
+
+        ul {
+            @include fadeInOut;
+            list-style-type: none;
+            padding: 0;
+            overflow: hidden;
+
+            li {
+                margin: 0 5px;
+                display: inline;
+                font-size: 1.5rem;
+
+                a {
+                    color: set-text-color($secondary-color);
+                }
+            }
+
+            li:hover {
+                a {
+                    color: $tertiary-color;
+                }
+            }
+        }
+
+        p {
+            padding-top: 5px;
+            position: relative;
+            bottom: 0px;
+        }
+    }
+
+    .parallax {
+        background-size: cover !important;
+        background-position: fixed;
+    }
+
+    // custom scroll bar
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: lighten($secondary-color, 3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: darken($secondary-color, 1);
+        border: lighten($secondary-color, 1) 1px solid;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: darken($secondary-color, 5);
+        border: lighten($secondary-color, 5) 1px solid;
+    }
+}
+
+@import "mobile";

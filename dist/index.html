@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Inconsolata|Lato"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Borislav Raychev's Portfolio Website</title>
+    </head>
+
+    <body id="index">
+        <!-- Navigation -->
+        <header>
+            <nav class="b-shadow">
+                <div id="logo" class="hidden">
+                    <!-- <img src="img/logo.png" alt=""> -->
+                </div>
+                <ul class="hide-on-small">
+                    <li id="contact-li">
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li id="portfolio-li">
+                        <a href="#proj1">Portfolio</a>
+                    </li>
+                    <li id="about-li"><a href="#about">About Me</a></li>
+                    <li id="welcome-li" class="active">
+                        <a href="#welcome">Home</a>
+                    </li>
+                </ul>
+                <a
+                    ><i
+                        id="menu-icon"
+                        class="fas fa-bars hide-on-medium hide-on-large hide-on-very-large"
+                    ></i
+                ></a>
+                <ul
+                    id="mobile-nav"
+                    class="hidden hide-on-medium hide-on-large hide-on-very-large"
+                >
+                    <li id="welcome-mobile-li">
+                        <a href="#welcome" class="lead">Home</a>
+                    </li>
+                    <li id="about-mobile-li">
+                        <a href="#photo" class="lead">About Me</a>
+                    </li>
+                    <li id="portfolio-mobile-li">
+                        <a href="#proj1" class="lead">Portfolio</a>
+                    </li>
+                    <li id="contact-mobile-li">
+                        <a href="#contact" class="lead">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Welcome Section -->
+        <section id="welcome" class="parallax section">
+            <h1 id="title" class="lg-heading">Borislav Raychev</h1>
+            <h1 class="sm-heading">
+                Web Developer, System Administrator and Engineer
+            </h1>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h1 id="about-heading" class="md-heading">A Bit About Me...</h1>
+            <div class="container">
+                <img src="img/photo_edited.png" alt="" id="photo" />
+                <div>
+                    <div class="about-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <p class="lead">
+                        Hello, my name is Borislav. I currently work as a System
+                        Administrator, while always looking to take on some
+                        freelance web development. Thank you for taking the time
+                        to look at my website to see a sample of my work.
+                    </p>
+                    <hr class="primary" />
+                    <p class="lead">Here are some of the technologies I use:</p>
+                    <ul class="lead">
+                        <li>HTML5, CSS, JavaScript ES6</li>
+                        <li>SASS, JSX, jQuery</li>
+                        <li>Bootstrap, MaterializeCSS</li>
+                        <li>React, Vue</li>
+                        <li>Firebase, SQL, MongoDB</li>
+                        <li>NodeJS, Express</li>
+                        <li>CorelDRAW, Affinity Photo</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="about-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <p class="lead">
+                        I graduated from the Technical University of Plovdiv as
+                        an engineer in Computer Systems and Technology.
+                    </p>
+                    <p class="lead">
+                        Soon after, I started working as an RTL Verification
+                        specialist using SystemVerilog and UVM. That position
+                        helped me further my knowledge in object oriented
+                        programming, use of standardized methodologies, version
+                        control and automated bugtesting.
+                    </p>
+                    <p class="lead">
+                        Eventually I moved into System Administration, which
+                        helped me improve my knowledge in virtualization,
+                        networking, computer automation and working with
+                        databases. Now, I seek to expand my knowledge into the
+                        vast realm of full stack Web Development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <h1 id="portfolio-heading" class="md-heading">Some of my work:</h1>
+            <div id="portfolio-wrap">
+                <div id="proj1" class="project br-shadow">
+                    <p class="tag">ACTIVE</p>
+                    <p class="projTitle">React Funds Management App</p>
+                </div>
+                <div id="proj6" class="project br-shadow">
+                    <p class="projTitle">Contact Manager</p>
+                </div>
+                <div id="proj2" class="project br-shadow">
+                    <p class="projTitle">TODO List Apps</p>
+                </div>
+                <div id="proj3" class="project br-shadow">
+                    <p class="projTitle">Online Computer Store</p>
+                </div>
+                <div id="proj5" class="project br-shadow">
+                    <p class="projTitle">freeCodeCamp Projects</p>
+                </div>
+                <div id="proj4" class="project br-shadow">
+                    <p class="tag">WIP</p>
+                    <p class="projTitle">Birestroika Pub</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modals -->
+
+        <!-- Funds Manager -->
+        <div id="proj1Mod" class="modal br-shadow hidden">
+            <a class="modal-close"><i class="fas fa-times"></i></a>
+            <div class="modal-content">
+                <h1 class="sm-heading text-center modal-title">
+                    <a href="https://kinti.b-raychev.com" target="_blank">
+                        React Funds Management App</a
+                    >
+                </h1>
+                <p class="lead">
+                    This is an application build for my own personal use, but it
+                    can be used by everyone. Once a user has registered, they
+                    can input transactions and keep track of their funds. The
+                    App is designed to be mobile friendly, where a user can use
+                    it easily on the go.
+                </p>
+                <br />
+                <p class="lead">
+                    This app features all four CRUD (Create, read, update and
+                    delete) functions. It features a fully functional login
+                    system, with authorisation and route protection. It is build
+                    with React and uses Firebase as a database. Styling is done
+                    with bootstrap. It is hosted on firebase (the URL
+                    <a href="https://kinti.b-raychev.com" target="_blank"
+                        >kinti.b-raychev.com</a
+                    >
+                    redirects to
+                    <a
+                        href="https://reactfundsmanager.firebaseapp.com/"
+                        target="_blank"
+                        >https://reactfundsmanager.<br
+                            class="hide-on-medium hide-on-large hide-on-very-large"
+                        />firebaseapp.com/</a
+                    >
+                    )
+                </p>
+                <div class="modal-grid-row">
+                    <a href="https://kinti.b-raychev.com" target="_blank">
+                        <div
+                            id="proj1i1"
+                            class="modal-grid-cell br-shadow"
+                        ></div
+                    ></a>
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            When not authorized, only the registration and login
+                            forms are accessible and all attempts at accessing
+                            other features via the URL, redirect to the Login
+                            page. Feel free to register or login in if you
+                            already have an account. You can also use the
+                            account test@test.com with password test1234 for
+                            example pre-entered transactions.
+                        </p>
+                    </div>
+                    <a href="https://kinti.b-raychev.com" target="_blank">
+                        <div
+                            id="proj1i2"
+                            class="modal-grid-cell br-shadow"
+                        ></div
+                    ></a>
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            Each transaction is tied to a user's ID. Users can
+                            create, edit or delete a transaction at any time,
+                            but cannot access transactions of other users.
+                        </p>
+                    </div>
+                    <a href="https://kinti.b-raychev.com" target="_blank">
+                        <div
+                            id="proj1i3"
+                            class="modal-grid-cell br-shadow"
+                        ></div
+                    ></a>
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            New transactions can be added by using the "New"
+                            button in the home page. The "entry" field is used
+                            as a name for the transaction, "category" is for
+                            sorting and statistics purposes (WIP), "details" is
+                            used for a more detailed description of the
+                            transaction. "Value" only accepts positive or
+                            negative numbers, where if a transaction is negative
+                            (has - in front of it) it is added as an expense,
+                            otherwise it's added as a profit.
+                        </p>
+                    </div>
+                </div>
+                <ul>
+                    <span class="lead"
+                        >Planned Features:
+                        <li>Owed feature</li>
+                        <li>Filters & Pagination</li>
+                        <li>
+                            Settings with a new collection (table) tied to user
+                            IDs
+                        </li>
+                        <li>Statistics</li>
+                        <li>Data Encryption</li>
+                        <li>
+                            Migrating the database from Firebase to MySQL or
+                            MongoDB
+                        </li>
+                    </span>
+                </ul>
+                <div class="text-center github-link">
+                    <a
+                        href="https://github.com/aurassai/funds_manager"
+                        target="_blank"
+                        ><i class="fab fa-github"></i>
+                        <p class="lead">Check project on github.</p></a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- TODO Apps -->
+        <div id="proj2Mod" class="modal br-shadow hidden">
+            <a class="modal-close"><i class="fas fa-times"></i></a>
+            <div class="modal-content">
+                <h1 class="sm-heading text-center modal-title">
+                    React & Vue TODO Apps
+                </h1>
+                <p class="lead">
+                    Two simple demonstration apps intended to be used as a TODO
+                    List or a shopping list. They are essentially the same app
+                    made in either React or Vue. They use
+                    <a
+                        href="https://jsonplaceholder.typicode.com"
+                        target="_blank"
+                        >JSON Placeholder</a
+                    >, a fake Online REST API for prototyping, to which they can
+                    make create, read and delete requests. As JSON placeholder
+                    does not provide an actual database, data does not persist
+                    after refreshing the page. Both of the apps are hosted on
+                    <a href="https://www.netlify.com" target="_blank">Netlify</a
+                    >.
+                </p>
+                <div class="modal-grid-row">
+                    <a
+                        href="https://serene-davinci-1af819.netlify.com/#/"
+                        target="_blank"
+                    >
+                        <div id="proj2i1" class="modal-grid-cell br-shadow">
+                            <div class="tag">JSON placeholder</div>
+                        </div></a
+                    >
+                    <div class="modal-grid-text-cell">
+                        <p class="lead text-center">
+                            This app is made with React.
+                        </p>
+                        <div class="text-center github-link">
+                            <a
+                                href="https://github.com/aurassai/react_todo_jp"
+                                target="_blank"
+                                ><i class="fab fa-github"></i>
+                                <p class="lead">Check project on github.</p></a
+                            >
+                        </div>
+                    </div>
+                    <a
+                        href="https://tender-minsky-e08051.netlify.com/#/"
+                        target="_blank"
+                    >
+                        <div id="proj2i2" class="modal-grid-cell br-shadow">
+                            <div class="tag">JSON placeholder</div>
+                        </div></a
+                    >
+                    <div class="modal-grid-text-cell">
+                        <p class="lead text-center">
+                            This app is made with Vue.
+                        </p>
+                        <div class="text-center github-link">
+                            <a
+                                href="https://github.com/aurassai/vue_todo_jp"
+                                target="_blank"
+                                ><i class="fab fa-github"></i>
+                                <p class="lead">Check project on github.</p></a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Computer Store -->
+        <div id="proj3Mod" class="modal br-shadow hidden">
+            <a class="modal-close"><i class="fas fa-times"></i></a>
+            <div class="modal-content">
+                <h1 class="sm-heading text-center modal-title">
+                    <a
+                        href="http://pcstore.b-raychev.com/index.php?route=common/home"
+                        target="_blank"
+                    >
+                        Online Computer Store</a
+                    >
+                </h1>
+                <p class="lead">
+                    This is a demonstration for an
+                    <a
+                        href="https://www.opencart.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        OpenCart</a
+                    >
+                    based online store. It is hosted on the same platform I am
+                    using for this website (<a
+                        href="https://www.a2hosting.com"
+                        target="_blank"
+                        >a2hosting</a
+                    >). The store is available in Bulgarian or English language
+                    and currency can be switched between bulgarian leva or euro
+                    (use
+                    <a
+                        href="./img/projects/pcstore/localization.png"
+                        target="_blank"
+                        >these</a
+                    >
+                    buttons to do so).
+                </p>
+                <div class="modal-grid-row">
+                    <a
+                        href="./img/projects/pcstore/pcstore_products.png"
+                        target="_blank"
+                    >
+                        <div
+                            id="proj3i1"
+                            class="modal-grid-cell br-shadow"
+                        ></div
+                    ></a>
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            Products are listed by categories and subcategories
+                            and can be further refined by filters. A product may
+                            be listed in multiple categories. They can be easily
+                            be added to cart, compared with other products based
+                            on their attributes or added to wishlist.
+                        </p>
+                    </div>
+                    <a
+                        href="./img/projects/pcstore/pcstore_admin.png"
+                        target="_blank"
+                    >
+                        <div
+                            id="proj3i2"
+                            class="modal-grid-cell br-shadow"
+                        ></div
+                    ></a>
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            Management is done through an admin panel, where the
+                            owner of the site can control everything. For a
+                            better view of all of the features the admin panel and OpenCart
+                            give,
+                            <a
+                                href="https://demo.opencart.com/admin/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                click here for a demo.</a
+                            >
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center github-link">
+                    <a href="https://pcstore.b-raychev.com" target="_blank"
+                        ><i class="fab fa-opencart"></i>
+                        <p class="lead">
+                            Check out the store.
+                        </p></a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Pub Website -->
+        <div id="proj4Mod" class="modal br-shadow hidden">
+            <a class="modal-close"><i class="fas fa-times"></i></a>
+            <div class="modal-content">
+                <h1 class="sm-heading text-center modal-title">
+                    Birestroika Pub
+                </h1>
+                <p class="lead">
+                    An HTML and CSS only website for a fictional pub/restaurant
+                    I am working on in order to practice my design skills. Still
+                    very early in development.
+                </p>
+                <div class="wip"></div>
+            </div>
+        </div>
+
+        <!-- FCC Projects -->
+        <div id="proj5Mod" class="modal br-shadow hidden">
+            <a class="modal-close"><i class="fas fa-times"></i></a>
+            <div class="modal-content">
+                <h1 class="sm-heading text-center modal-title">
+                    <a
+                        href="https://www.freecodecamp.org/aurassai"
+                        target="_blank"
+                    >
+                        FreeCodeCamp</a
+                    >
+                    Projects
+                </h1>
+                <p class="lead">
+                    Here are some of the projects I have done as part of the
+                    FreeCodeCamp certification process:
+                </p>
+                <div class="modal-grid-row">
+                    <a
+                        href="https://codepen.io/aurassai/full/JZPRoa/"
+                        target="_blank"
+                    >
+                        <div id="proj5i1" class="modal-grid-cell br-shadow">
+                            <p class="projTitle">Simon Says</p>
+                        </div></a
+                    >
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            A memory game based on the game Simon Says. Users
+                            are required to remember a sequence of steps, up to
+                            20 levels. Every few levels the speed of the game
+                            also increases. The game features a strict mode that
+                            resets the progress whenever a mistake is made.
+                        </p>
+                        <div class="text-center github-link">
+                            <a
+                                href="https://codepen.io/aurassai/pen/JZPRoa"
+                                target="_blank"
+                                ><p class="lead">
+                                    See the code on codepen.
+                                    <i class="fab fa-codepen"></i></p
+                            ></a>
+                        </div>
+                    </div>
+                    <a
+                        href="https://codepen.io/aurassai/full/NYZJjE/"
+                        target="_blank"
+                    >
+                        <div id="proj5i2" class="modal-grid-cell br-shadow">
+                            <p class="projTitle">Calculator</p>
+                        </div></a
+                    >
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            Calculator written in Javascript. With this project
+                            I did not only want to emulate a physical
+                            calculator, but make it so the user is able to do
+                            fast, seamless calculations with keyboard inputs.
+                        </p>
+                        <div class="text-center github-link">
+                            <a
+                                href="https://codepen.io/aurassai/pen/NYZJjE"
+                                target="_blank"
+                                ><p class="lead">
+                                    See the code on codepen.
+                                    <i class="fab fa-codepen"></i></p
+                            ></a>
+                        </div>
+                    </div>
+                    <a
+                        href="https://codepen.io/aurassai/full/RJWrqe/"
+                        target="_blank"
+                    >
+                        <div id="proj5i3" class="modal-grid-cell br-shadow">
+                            <p class="projTitle">Pomodoro Clock</p>
+                        </div></a
+                    >
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            A productivity timer app made with JavaScript. The
+                            idea is for the user to have a working session
+                            followed by a break session. The user can change the
+                            length of each session, pause or reset to start
+                            over. The sessions duration are remembered in the
+                            browser's local storage.
+                        </p>
+                        <div class="text-center github-link">
+                            <a
+                                href="https://codepen.io/aurassai/pen/RJWrqe/"
+                                target="_blank"
+                                ><p class="lead">
+                                    See the code on codepen.
+                                    <i class="fab fa-codepen"></i></p
+                            ></a>
+                        </div>
+                    </div>
+                    <a
+                        href="https://codepen.io/aurassai/full/oyvzvQ/"
+                        target="_blank"
+                    >
+                        <div id="proj5i4" class="modal-grid-cell br-shadow">
+                            <p class="projTitle">Tic Tac Toe</p>
+                        </div></a
+                    >
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            A Tic Tac Toe game made with JavaScript. The user
+                            can select to play as either X and start first, or O
+                            to start second.
+                        </p>
+                        <div class="text-center github-link">
+                            <a
+                                href="https://codepen.io/aurassai/pen/oyvzvQ/"
+                                target="_blank"
+                                ><p class="lead">
+                                    See the code on codepen.
+                                    <i class="fab fa-codepen"></i></p
+                            ></a>
+                        </div>
+                    </div>
+                    <a
+                        href="https://codepen.io/aurassai/full/jzrwje/"
+                        target="_blank"
+                    >
+                        <div id="proj5i5" class="modal-grid-cell br-shadow">
+                            <p class="projTitle">Twitch Watcher</p>
+                        </div></a
+                    >
+                    <div class="modal-grid-text-cell">
+                        <p class="lead">
+                            Another app made with JavaScript, where the user can
+                            check if their favorite streamers are currently
+                            streaming on twitch. It uses the twitch API. While
+                            the app offers a pre-made list of streamers, the
+                            user is able to customize it, by removing or adding
+                            their own. The settings are stored in the browser's
+                            local storage.
+                        </p>
+                        <div class="text-center github-link">
+                            <a
+                                href="https://codepen.io/aurassai/pen/jzrwje/"
+                                target="_blank"
+                                ><p class="lead">
+                                    See the code on codepen.
+                                    <i class="fab fa-codepen"></i></p
+                            ></a>
+                        </div>
+                    </div>
+                    <a
+                        href="https://www.freecodecamp.org/certification/aurassai/javascript-algorithms-and-data-structures"
+                        target="_blank"
+                    >
+                        <div id="proj5i6" class="modal-grid-cell br-shadow">
+                            <p class="projTitle smallTitle">
+                                JavaScript Algorithms and Data Structures
+                                Certificate
+                            </p>
+                        </div></a
+                    >
+                    <a
+                        href="https://www.freecodecamp.org/certification/aurassai/legacy-front-end"
+                        target="_blank"
+                    >
+                        <div id="proj5i7" class="modal-grid-cell br-shadow">
+                            <p class="projTitle smallTitle">
+                                Front End Development Certificate
+                            </p>
+                        </div></a
+                    >
+                </div>
+                <div class="text-center github-link">
+                    <a href="https://codepen.io/aurassai" target="_blank"
+                        ><i class="fab fa-codepen"></i>
+                        <p class="lead">
+                            See more of my projects on codepen.
+                        </p></a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Manager -->
+        <div id="proj6Mod" class="modal br-shadow hidden">
+            <a class="modal-close"><i class="fas fa-times"></i></a>
+            <div class="modal-content">
+                <h1 class="sm-heading text-center modal-title">
+                    <a
+                        href="https://aurassai.github.io/contactmanager/"
+                        target="_blank"
+                    >
+                        React Contact Manager</a
+                    >
+                </h1>
+
+                <p class="lead">
+                    This is a contact manager app written with React. It uses
+                    <a
+                        href="https://jsonplaceholder.typicode.com"
+                        target="_blank"
+                        >JSON Placeholder</a
+                    >, a fake Online REST API in the place of a database. Data
+                    is requested from JSON placeholder. While you can add, edit
+                    or delete in it, as there is no database, the data does not
+                    persist upon refreshing the page. My
+                    <a href="https://kinti.b-raychev.com" target="_blank"
+                        >funds management app</a
+                    >
+                    is built as an improvement of this app, featuring a database
+                    provided by firebase. This app is hosted on
+                    <a href="https://pages.github.com" target="_blank">
+                        Github Pages</a
+                    >.
+                </p>
+
+                <div class="text-center github-link">
+                    <a
+                        href="https://github.com/aurassai/contactmanager"
+                        target="_blank"
+                        ><i class="fab fa-github"></i>
+                        <p class="lead">Check project on github.</p></a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay hidden"></div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h1 id="contact-heading" class="md-heading">
+                This is how you can reach me...
+            </h1>
+            <div class="boxes container">
+                <div class="tertiary br-shadow contact-text">
+                    <span class="secondary-text">Email:</span
+                    ><br
+                        class="hide-on-medium hide-on-large hide-on-very-large"
+                    />
+                    b-raychev@yandex.com
+                </div>
+                <div class="tertiary br-shadow contact-text">
+                    <span class="secondary-text">Phone:</span
+                    ><br
+                        class="hide-on-medium hide-on-large hide-on-very-large"
+                    />
+                    +359 895 335 765
+                </div>
+                <div class="tertiary br-shadow contact-text">
+                    <span class="secondary-text">
+                        <a
+                            href="./pdf/Borislav-Raychev-CV-ENG.pdf"
+                            target="_blank"
+                        >
+                            Check out my CV <i class="fas fa-file-alt"></i></a
+                    ></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer id="footer" class="invisible">
+            <div class="container">
+                <ul id="footer-icons">
+                    <li>
+                        <a href="https://codepen.io/aurassai" target="_blank"
+                            ><i class="fab fa-codepen"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.freecodecamp.org/aurassai"
+                            target="_blank"
+                            ><i class="fab fa-free-code-camp"></i
+                        ></a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/aurassai" target="_blank"
+                            ><i class="fab fa-github"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/borislav-raychev-9955567a/"
+                            target="_blank"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                    </li>
+                </ul>
+                <p class="lead">&copy; 2019 Borislav Raychev</p>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

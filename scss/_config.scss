@@ -1,0 +1,233 @@
+$primary-color: #224f93;
+$secondary-color: #39383f;
+$tertiary-color: #6b7d96;
+$show-home-image: true;
+$home-image: url(../img/bg1_med.jpeg);
+$home-image-mobile: url(../img/bg1_small.jpeg);
+$background-opacity: 0.4;
+
+//projects
+$projectWidth: 384px;
+$projectHeight: 216px;
+$projectWidthMobile: 300px;
+$projectHeightMobile: 233px;
+$projectWidthActive: 420px;
+$projectHeightActive: 300px;
+$projectOpacity: 0.5;
+$projectOpacityHover: 1;
+$projectOpacityDescription: 0.95;
+
+//project modals
+$modalWidth: 1000px;
+$modalHeight: 650px;
+$modalOpacity: 0.99;
+$modalOverlayOpacity: 0.6;
+$modalCellWidth: 320px;
+$modalCellHeight: 180px;
+$modalCellMobileWidth: 240px;
+$modalCellMobileHeight: 135px;
+
+//Project Thumbnails
+$projectAmount: 6;
+@mixin projThumbnail($index) {
+    @if $index == 1 {
+        background-image: url("../img/projects/funds_manager/funds_manager_home.png");
+    } @else if $index == 2 {
+        background-image: url("../img/projects/todo/todo_home.png");
+    } @else if $index == 3 {
+        background-image: url("../img/projects/pcstore/pcstore_home.png");
+    } @else if $index == 4 {
+        background-image: url("../img/projects/pub/pub_home.png");
+    } @else if $index == 5 {
+        background-image: url("../img/projects/freeCodeCamp_logo.png");
+    } @else if $index == 6 {
+        background-image: url("../img/projects/contact_manager/contact_manager_home.png");
+    } @else {
+        background-image: url("../img/projects/freeCodeCamp_logo.png");
+    }
+}
+
+// Modal Images
+#proj1i1 {
+    background-image: url("../img/projects/funds_manager/funds_manager_login.png");
+}
+#proj1i2 {
+    background-image: url("../img/projects/funds_manager/funds_manager_details.png");
+}
+#proj1i3 {
+    background-image: url("../img/projects/funds_manager/funds_manager_add.png");
+}
+
+#proj2i1 {
+    background-image: url("../img/projects/react-logo.png");
+}
+
+#proj2i2 {
+    background-image: url("../img/projects/vue-logo.png");
+}
+
+#proj2i3 {
+    background-image: url("../img/projects/react-logo.png");
+}
+
+#proj2i4 {
+    background-image: url("../img/projects/vue-logo.png");
+}
+
+#proj3i1 {
+    background-image: url("../img/projects/pcstore/pcstore_products.png");
+}
+
+#proj3i2 {
+    background-image: url("../img/projects/pcstore/pcstore_admin.png");
+}
+
+#proj5i1 {
+    background-image: url("../img/projects/fcc/proj1.png");
+}
+
+#proj5i2 {
+    background-image: url("../img/projects/fcc/proj2.png");
+}
+
+#proj5i3 {
+    background-image: url("../img/projects/fcc/proj3.png");
+}
+
+#proj5i4 {
+    background-image: url("../img/projects/fcc/proj4.png");
+}
+
+#proj5i5 {
+    background-image: url("../img/projects/fcc/proj5.png");
+}
+
+#proj5i6 {
+    background-image: url("../img/projects/freeCodeCamp_logo.png");
+}
+
+#proj5i7 {
+    background-image: url("../img/projects/freeCodeCamp_logo.png");
+}
+
+@for $i from 1 through $projectAmount {
+    #proj#{$i} {
+        @include projThumbnail($i);
+    }
+}
+
+//Ease out effect
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
+//Fade in display effect
+@mixin fadeIn {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+}
+
+@mixin fadeInShort {
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    51% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        opacity: $projectOpacityDescription;
+    }
+}
+
+@mixin fadeOut {
+    animation: fadeOut 1s;
+    -webkit-animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+    0% {
+        display: block;
+        opacity: $projectOpacityDescription;
+    }
+    99% {
+        opacity: 0;
+        display: block;
+    }
+    100% {
+        display: none;
+    }
+}
+
+@mixin fadeInOut {
+    transition: all 0.5s ease-out;
+    visibility: visible;
+    opacity: 1;
+
+    &.invisible {
+        visibility: hidden;
+        opacity: 0;
+        transition-duration: (0, 0.5s);
+        transition-property: (opacity, visibility);
+        transition-delay: (0, 0.5s);
+    }
+}
+
+//Welcome background
+@mixin background {
+    @if $show-home-image {
+        &#welcome {
+            background: $home-image;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba($secondary-color, $background-opacity);
+            }
+        }
+    }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (min-width: 801px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 1201px) and (max-width: 1700px) {
+        @content;
+    }
+}
+
+@mixin mediaXL {
+    @media screen and (min-width: 1701px) {
+        @content;
+    }
+}

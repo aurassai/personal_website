@@ -1,0 +1,164 @@
+// Widescreens
+@include mediaXL {
+    .container {
+        max-width: 1300px;
+    }
+
+    .hide-on-very-large {
+        display: none !important;
+    }
+
+    #about,
+    #portfolio,
+    #contact {
+        .md-heading {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+    }
+
+    #portfolio-wrap {
+        width: 70%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// Desktops and Laptops
+@include mediaLg {
+    .hide-on-large {
+        display: none !important;
+    }
+
+    #about,
+    #portfolio,
+    #contact {
+        .md-heading {
+            padding: 75px 0 25px 0;
+        }
+    }
+
+    #portfolio-wrap {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// Tablets and Small Laptops
+@include mediaMd {
+    .hide-on-medium {
+        display: none !important;
+    }
+
+    #about {
+        .container {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    #portfolio-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// Smartphones
+@include mediaSm {
+    #welcome {
+        background: $home-image-mobile !important;
+        background-position: center !important;
+    }
+
+    .hide-on-small {
+        display: none !important;
+    }
+
+    body {
+        min-width: 320px !important;
+    }
+
+    section {
+        min-width: 320px !important;
+    }
+
+    .lg-heading {
+        font-size: 2.5rem !important;
+        margin-bottom: 1rem;
+    }
+    .md-heading {
+        font-size: 1.5rem !important;
+    }
+    .sm-heading {
+        font-size: 1.1rem !important;
+        font-weight: bold;
+    }
+    .lead {
+        font-size: 1rem !important;
+    }
+
+    .modal-grid-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .modal-grid-cell {
+        width: $modalCellMobileWidth !important;
+        height: $modalCellMobileHeight !important;
+    }
+
+    .modal-grid-text-cell {
+        width: 80% !important;
+        min-width: $modalCellMobileWidth !important;
+    }
+
+    #about {
+        .container {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    #portfolio-wrap {
+        grid-template-columns: 1fr;
+        padding: 10px !important;
+
+        .project {
+            justify-self: center;
+            width: $projectWidthMobile !important;
+            height: $projectHeightMobile !important;
+        }
+
+        .active {
+            width: $projectWidthMobile !important;
+            height: $projectHeightMobile !important;
+
+            .projDescription {
+                @include fadeInShort;
+            }
+        }
+    }
+    .projTitle {
+        font-size: 1rem !important;
+    }
+
+    .modal {
+        .projTitle {
+            font-size: 0.75rem !important;
+        }
+
+        .wip {
+            width: $modalCellMobileWidth !important;
+            height: $modalCellMobileHeight !important;
+        }
+    }
+
+    #contact {
+        .contact-text {
+            font-size: 1rem !important;
+        }
+    }
+
+    #index #contact {
+        min-height: 75vh !important;
+    }
+
+    #footer {
+        position: relative !important;
+    }
+}
